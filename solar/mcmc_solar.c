@@ -24,7 +24,7 @@ void get_patch( float *array,  float *x , int n_row);
 void my_model( float *x_obs, float *array, float a, float b, float c , float d,  int n_row);
 float likelihood(float *y_obs, float *y_model, int n_row);
 int min_likelihood( float *array , int n_row);
-void print_array(float *array, int n_puntos);
+
 
 //------------------------------------------------------------------------------------------------------------
 
@@ -266,9 +266,3 @@ int min_likelihood( float *array , int n_row){
     return ind;
 }
 
-void print_array(float *array, int n_puntos){
-    int i;
-    for(i=0;i<n_puntos;i++){
-        printf("%f \n", array[i]);
-    }
-}
