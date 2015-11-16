@@ -10,14 +10,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 data = np.loadtxt("salida.dat")
+m = np.loadtxt("new_data.txt")
 
 plt.figure()
 f,fig = plt.subplots(3,3,figsize=(10,10))
 
-fig[0,0].scatter(data[:,0] , data[:,1], 0.01)
+fig[0,0].scatter(m[:,0] , m[:,1], 1)
 fig[0,0].tick_params(axis='x',which='both',bottom='off',top='off',labelbottom='off')
 fig[0,0].set_title("$Fit$")
-fig[0,1].plot( data[:,0] , data[:,5] , color = 'black')
+fig[0,1].scatter( m[:,0] , m[:,2] , 1)
 fig[0,1].tick_params(axis='x',which='both',bottom='off',top='off',labelbottom='off')
 fig[0,1].set_title("$Chi$")
 fig[1,0].scatter( data[:,6] , data[:,7], 1)
